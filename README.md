@@ -1,105 +1,103 @@
 # DevHayat
 
-> A modern project management platform for software development teams.
+### Modern Project Management Platform for Software Teams
 
-DevHayat is a full-stack project management web application designed for managing software projects, tasks, issues, sprints, team members, and project progress in one centralized platform.
+DevHayat is a full-stack project management platform designed for software development teams.
 
-The project was built as a practical full-stack application with authentication, role-based access control, REST API routes, PostgreSQL database integration, and a modern responsive interface.
+It provides a centralized environment for managing projects, team members, tasks, issues, and sprints through a modern web interface.
+
+The project was built as a practical full-stack software engineering project with a real PostgreSQL database, authentication system, REST API routes, role-based access control, and CRUD operations.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔐 Authentication & Authorization
+### Authentication & Security
 
-* User registration and login
+* User registration
+* User login
 * Secure password hashing with bcrypt
 * Session-based authentication
-* Logout functionality
-* Authentication middleware
+* Protected API routes
 * Role-based access control
-* Admin and project manager permissions
+* Admin account management
 
-### 👥 Team Management
-
-* View project members
-* Add members to projects
-* Remove project members
-* User roles
-* Member information
-* Project membership management
-
-### 📁 Project Management
-
-* Create projects
-* View project details
-* Update project information
-* Delete projects
-* Project status management
-* Project progress tracking
-* Project owners
-* Project members
-
-### 🐛 Issue Management
-
-* Create issues
-* Update issues
-* Delete issues
-* Issue types:
-
-  * Task
-  * Bug
-  * Story
-* Issue priorities:
-
-  * Low
-  * Medium
-  * High
-  * Critical
-* Issue status tracking
-* Issue assignment
-* Issue reporting
-
-### ✅ Task Management
-
-* Create tasks
-* Update tasks
-* Delete tasks
-* Assign tasks to users
-* Task priorities
-* Task status tracking
-* Due dates
-* Sprint assignment
-
-### 🏃 Sprint Management
-
-* Create sprints
-* Update sprints
-* Delete sprints
-* Sprint goals
-* Sprint status
-* Start and end dates
-* Sprint task management
-
-### 📊 Dashboard & Reports
+### Dashboard
 
 * Project statistics
 * Task statistics
 * Issue statistics
 * Team member statistics
 * Project progress
-* Reports and analytics
+* Development overview
 
-### ⚙️ Settings
+### Projects
 
-* Account settings
-* User information
-* Password management
-* Role information
+* Create projects
+* Edit projects
+* Delete projects
+* View project details
+* Project status management
+* Project progress tracking
+* Project owners
+* Project members
+
+### Issues
+
+* Create issues
+* Edit issues
+* Delete issues
+* Assign issues to users
+* Issue types
+* Issue priorities
+* Issue status management
+* Project-based issue tracking
+
+### Tasks
+
+* Create tasks
+* Edit tasks
+* Delete tasks
+* Assign tasks
+* Task priorities
+* Task status management
+* Due dates
+* Project association
+
+### Sprints
+
+* Create sprints
+* Edit sprints
+* Delete sprints
+* Sprint goals
+* Sprint status
+* Start and end dates
+* Sprint task management
+
+### Team Management
+
+* View team members
+* User roles
+* Project membership
+* Assign users to projects
+* Manage project members
+
+### Reports
+
+* Project progress
+* Task statistics
+* Issue statistics
+* Development overview
+
+### Settings
+
+* Application settings
+* User-related settings
+* Account management
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -112,23 +110,22 @@ The project was built as a practical full-stack application with authentication,
 ### Backend
 
 * Next.js App Router
-* Next.js API Routes
-* TypeScript
-* Prisma ORM
+* Next.js Route Handlers
+* REST-style API endpoints
 
 ### Database
 
 * PostgreSQL
 * Neon PostgreSQL
-* Prisma Migrations
+* Prisma ORM
 
 ### Authentication
 
-* Session-based authentication
-* HTTP cookies
-* bcrypt password hashing
+* Custom authentication system
+* bcryptjs
+* Database-backed sessions
 
-### Development
+### Development Tools
 
 * Git
 * GitHub
@@ -138,44 +135,41 @@ The project was built as a practical full-stack application with authentication,
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```text
-DevHayat
-│
-├── Frontend
-│   ├── Dashboard
-│   ├── Projects
-│   ├── Issues
-│   ├── Tasks
-│   ├── Sprints
-│   ├── Team
-│   ├── Reports
-│   └── Settings
-│
-├── Backend
-│   ├── Authentication API
-│   ├── Project API
-│   ├── Issue API
-│   ├── Task API
-│   ├── Sprint API
-│   └── User API
-│
-├── Database
-│   ├── PostgreSQL
-│   ├── Prisma ORM
-│   └── Prisma Migrations
-│
-└── Authentication
-    ├── Sessions
-    ├── Cookies
-    ├── Password Hashing
-    └── Role-Based Access Control
+┌──────────────────────────────┐
+│          Browser             │
+│     Desktop / Mobile         │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│          Next.js             │
+│        App Router            │
+├──────────────────────────────┤
+│ Pages                        │
+│ Components                   │
+│ API Route Handlers           │
+│ Authentication               │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│          Prisma              │
+│            ORM               │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│       PostgreSQL             │
+│          Neon                │
+└──────────────────────────────┘
 ```
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 DevHayat/
@@ -193,40 +187,66 @@ DevHayat/
 │   ├── app/
 │   │   ├── api/
 │   │   │   ├── auth/
-│   │   │   ├── dashboard/
 │   │   │   ├── issues/
 │   │   │   ├── projects/
 │   │   │   ├── sprints/
 │   │   │   ├── tasks/
 │   │   │   └── users/
 │   │   │
+│   │   ├── dashboard/
 │   │   ├── issues/
-│   │   ├── login/
 │   │   ├── projects/
-│   │   ├── register/
 │   │   ├── reports/
 │   │   ├── settings/
 │   │   ├── sprints/
 │   │   ├── tasks/
-│   │   └── team/
+│   │   ├── team/
+│   │   ├── login/
+│   │   ├── register/
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
 │   │
 │   ├── components/
+│   │   └── layout/
+│   │
 │   ├── generated/
+│   │   └── prisma/
+│   │
 │   └── lib/
-│       ├── auth.ts
 │       └── db.ts
 │
-├── .env
+├── .env.example
 ├── .gitignore
 ├── package.json
 ├── prisma.config.ts
-├── next.config.ts
-└── README.md
+├── README.md
+└── LICENSE
 ```
 
 ---
 
-## 🚀 Getting Started
+## Database
+
+DevHayat uses PostgreSQL with Prisma ORM.
+
+The main database models include:
+
+```text
+User
+Project
+ProjectMember
+Issue
+Task
+Sprint
+Session
+```
+
+Relationships between these models allow DevHayat to manage projects, users, tasks, issues, and sprints through a real relational database.
+
+---
+
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -247,37 +267,39 @@ Create a `.env` file:
 
 ```env
 DATABASE_URL="your_postgresql_connection_string"
+
+ADMIN_NAME="Dev Admin"
+ADMIN_EMAIL="admin@devhayat.local"
+ADMIN_PASSWORD="your_secure_password"
 ```
 
-For local development, you can use a PostgreSQL database.
-
-For cloud development, DevHayat can use Neon PostgreSQL.
-
-> Never commit `.env` or database credentials to GitHub.
+Do not commit `.env` to GitHub.
 
 ---
 
-## 🗄️ Database Setup
+## Database Setup
 
-DevHayat uses Prisma ORM with PostgreSQL.
-
-After configuring `DATABASE_URL`, run:
+Apply Prisma migrations:
 
 ```bash
 npx prisma migrate deploy
 ```
 
-This applies all existing database migrations.
-
-To inspect the database during development:
+Generate Prisma Client if necessary:
 
 ```bash
-npx prisma studio
+npx prisma generate
+```
+
+For development, you can also use:
+
+```bash
+npx prisma migrate dev
 ```
 
 ---
 
-## 👑 Create an Admin Account
+## Create an Admin Account
 
 DevHayat includes an admin creation script.
 
@@ -285,8 +307,8 @@ Configure the following variables in `.env`:
 
 ```env
 ADMIN_NAME="Dev Admin"
-ADMIN_EMAIL="admin@example.com"
-ADMIN_PASSWORD="your-secure-password"
+ADMIN_EMAIL="admin@devhayat.local"
+ADMIN_PASSWORD="your_secure_password"
 ```
 
 Then run:
@@ -297,20 +319,22 @@ npx tsx scripts/create-admin.ts
 
 The script will:
 
-* Create the admin account if it doesn't exist
-* Update an existing account if it already exists
-* Set the user's role to `ADMIN`
-* Hash the password securely using bcrypt
+* Create an admin account if it does not exist
+* Update an existing account if the email already exists
+* Hash the password using bcrypt
+* Assign the `ADMIN` role
 
 ---
 
-## ▶️ Run Development Server
+## Run in Development
+
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Open:
+Then open:
 
 ```text
 http://localhost:3000
@@ -318,21 +342,21 @@ http://localhost:3000
 
 ---
 
-## 🏭 Production Build
+## Run in Production
 
-Create an optimized production build:
+Build the application:
 
 ```bash
 npm run build
 ```
 
-Run the production server:
+Start the production server:
 
 ```bash
 npm run start
 ```
 
-For Codespaces or remote environments:
+For environments such as GitHub Codespaces where external access is required:
 
 ```bash
 npm run start -- --hostname 0.0.0.0
@@ -340,251 +364,256 @@ npm run start -- --hostname 0.0.0.0
 
 ---
 
-## 🔑 User Roles
+## User Roles
 
-DevHayat currently supports the following roles:
+DevHayat supports the following roles:
 
-| Role              | Description                        |
-| ----------------- | ---------------------------------- |
-| `ADMIN`           | Full administrative access         |
-| `PROJECT_MANAGER` | Project and team management        |
-| `DEVELOPER`       | Development-related project access |
-| `DESIGNER`        | Design-related project access      |
-| `MEMBER`          | Standard project member            |
-
----
-
-## 🔌 API Routes
-
-### Authentication
-
-```text
-POST /api/auth/register
-POST /api/auth/login
-POST /api/auth/logout
-GET  /api/auth/me
-```
-
-### Projects
-
-```text
-GET    /api/projects
-POST   /api/projects
-GET    /api/projects/[id]
-PATCH  /api/projects/[id]
-DELETE /api/projects/[id]
-```
-
-### Project Members
-
-```text
-GET    /api/projects/[id]/members
-POST   /api/projects/[id]/members
-DELETE /api/projects/[id]/members/[userId]
-```
-
-### Issues
-
-```text
-GET    /api/issues
-POST   /api/issues
-GET    /api/issues/[id]
-PATCH  /api/issues/[id]
-DELETE /api/issues/[id]
-```
-
-### Tasks
-
-```text
-GET    /api/tasks
-POST   /api/tasks
-GET    /api/tasks/[id]
-PATCH  /api/tasks/[id]
-DELETE /api/tasks/[id]
-```
-
-### Sprints
-
-```text
-GET    /api/sprints
-POST   /api/sprints
-GET    /api/sprints/[id]
-PATCH  /api/sprints/[id]
-DELETE /api/sprints/[id]
-```
-
-### Users
-
-```text
-GET    /api/users
-GET    /api/users/[id]
-PATCH  /api/users/[id]
-PATCH  /api/users/[id]/password
-```
-
-### Dashboard
-
-```text
-GET /api/dashboard
-```
+| Role              | Description                     |
+| ----------------- | ------------------------------- |
+| `ADMIN`           | Full system administration      |
+| `PROJECT_MANAGER` | Project and team management     |
+| `DEVELOPER`       | Development and task management |
+| `DESIGNER`        | Design-related project work     |
+| `MEMBER`          | Standard project member         |
 
 ---
 
-## 🔒 Security
+## API
+
+DevHayat uses Next.js Route Handlers for backend API functionality.
+
+Main API areas include:
+
+```text
+/api/auth
+/api/projects
+/api/projects/[id]/members
+/api/issues
+/api/tasks
+/api/sprints
+/api/users
+```
+
+The API handles operations such as:
+
+* Authentication
+* User management
+* Project CRUD
+* Issue CRUD
+* Task CRUD
+* Sprint CRUD
+* Project membership
+* Authorization
+
+---
+
+## Security
 
 DevHayat implements several security practices:
 
 * Password hashing with bcrypt
-* Session-based authentication
-* HTTP-only authentication cookies
+* Database-backed sessions
+* Protected API endpoints
 * Role-based authorization
-* Database-level unique constraints
-* Input validation
-* Protected API routes
-* Environment-based secrets
+* Environment variables for secrets
+* PostgreSQL constraints
+* Prisma ORM
+* Cascade and SetNull relationships where appropriate
 * `.env` excluded from Git
 
-Never expose:
-
-```text
-DATABASE_URL
-ADMIN_PASSWORD
-Database credentials
-Session secrets
-```
-
-in source code or public repositories.
+Secrets such as database credentials and admin passwords must never be committed to the repository.
 
 ---
 
-## 🧪 Development Workflow
+## Prisma
 
-Recommended workflow:
+Useful Prisma commands:
 
 ```bash
-git pull
-npm install
+npx prisma generate
+```
+
+```bash
+npx prisma migrate dev
+```
+
+```bash
 npx prisma migrate deploy
-npm run build
-npm run dev
 ```
-
-Before pushing changes:
 
 ```bash
-git status
-git add .
-git commit -m "Describe your changes"
-git push origin main
+npx prisma studio
 ```
 
 ---
 
-## 🌐 Deployment
+## Development Workflow
 
-DevHayat can be deployed to platforms supporting Next.js and PostgreSQL.
-
-Recommended architecture:
+A typical development workflow:
 
 ```text
-              ┌───────────────┐
-              │    Browser    │
-              └───────┬───────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │    Next.js      │
-             │   Application   │
-             └────────┬────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │     Prisma      │
-             │       ORM       │
-             └────────┬────────┘
-                      │
-                      ▼
-             ┌─────────────────┐
-             │    PostgreSQL   │
-             │      Neon       │
-             └─────────────────┘
+1. Create or modify a feature
+        ↓
+2. Update Prisma schema if necessary
+        ↓
+3. Create/apply database migration
+        ↓
+4. Implement API
+        ↓
+5. Implement frontend UI
+        ↓
+6. Test locally
+        ↓
+7. Run production build
+        ↓
+8. Commit changes
+        ↓
+9. Push to GitHub
 ```
 
-For temporary demonstrations, the project can also run inside GitHub Codespaces.
+Before pushing major changes:
+
+```bash
+npm run build
+```
+
+Make sure the production build completes successfully.
 
 ---
 
-## 📸 Project Screens
+## Deployment
 
-Screenshots can be added here:
+DevHayat can be deployed to a Node.js-compatible hosting environment.
+
+Recommended production setup:
 
 ```text
-Coming soon...
+Client
+   ↓
+Next.js Application
+   ↓
+PostgreSQL
+   ↓
+Neon
+```
+
+Environment variables must be configured on the hosting platform.
+
+The database should use a production PostgreSQL connection string and migrations should be applied using:
+
+```bash
+npx prisma migrate deploy
 ```
 
 ---
 
-## 🎯 Project Goals
+## Future Improvements
 
-DevHayat was created to provide a practical project management platform while demonstrating real-world full-stack development concepts such as:
-
-* Authentication
-* Authorization
-* CRUD operations
-* REST APIs
-* Database relationships
-* ORM usage
-* Session management
-* Role-based access control
-* Project management
-* Team management
-* Modern frontend development
-* Production builds
-* Git/GitHub workflow
-
----
-
-## 🔮 Future Improvements
-
-Possible future features include:
+Possible future versions may include:
 
 * Real-time notifications
 * WebSocket support
-* Activity logs
-* Advanced reporting
+* Advanced analytics
+* Kanban boards
+* Drag and drop task management
 * File attachments
-* Comments
-* Kanban board
-* Drag & Drop task management
+* Activity logs
 * Email notifications
-* Audit logs
-* Docker deployment
-* CI/CD pipeline
+* Two-factor authentication
+* OAuth login
+* Advanced permission management
+* Search and filtering
+* Dark/light theme customization
+* Docker support
+* CI/CD pipelines
 * Automated testing
-* Advanced permissions
-* Dark/Light theme customization
+* Production monitoring
 
 ---
 
-## 👨‍💻 Author
+## License
 
-**Parham shyasi**
+DevHayat is distributed under the:
+
+**DevHayat Community License v1.0**
+
+Copyright © 2026 Parham Hayat
+
+This is a custom **Source-Available** license created specifically for DevHayat.
+
+The project is available for free personal, educational, research, and non-commercial use.
+
+Users may:
+
+* View the source code
+* Study the project
+* Copy the project
+* Fork the repository
+* Modify the source code
+* Improve the project
+* Distribute modified versions for non-commercial purposes
+
+Attribution to the original author and project must be retained.
+
+Commercial use, commercial redistribution, selling the original project, or selling substantially unmodified forks requires written permission from the copyright holder.
+
+Modified versions should clearly state that they are based on DevHayat and should not falsely represent themselves as the original DevHayat project.
+
+See the [`LICENSE`](LICENSE) file for the complete terms.
+
+> DevHayat is not released under an OSI-approved Open Source license. It is a Source-Available project under the custom DevHayat Community License v1.0.
+
+---
+
+## Author
+
+### Parham Hayat
 
 Software Engineering Student
-Full-Stack Developer | Linux | DevOps | Networking | Cybersecurity
+Full-Stack Developer
+Linux & Networking Enthusiast
+Cybersecurity Enthusiast
 
 GitHub:
 
+```text
 https://github.com/parham0541
+```
 
 ---
 
-## 📄 License
+## Project
 
-This project is currently intended for educational and portfolio purposes.
+**DevHayat**
+
+A practical project management platform built to combine:
+
+```text
+Software Development
++
+Project Management
++
+Database Engineering
++
+Authentication
++
+Backend Development
++
+Modern Web Development
+```
 
 ---
 
-<p align="center">
-  Built with ❤️ by Parham.sh and h.hayat
-</p>
+## Status
+
+**Active Development**
+
+DevHayat is continuously being improved with new features, security improvements, database functionality, and UI enhancements.
+
+---
+
+### Copyright
+
+Copyright © 2026 Parham Hayat.
+
+All rights reserved except where explicitly permitted by the DevHayat Community License v1.0.
