@@ -37,6 +37,18 @@ export async function GET(
       );
     }
 
+    const currentUser = auth.user;
+
+    if (!currentUser) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Authentication required.",
+        },
+        { status: 401 }
+      );
+    }
+
     const project = await db.project.findUnique({
       where: {
         id: projectId,
@@ -59,14 +71,14 @@ export async function GET(
     const membership = await db.projectMember.findUnique({
       where: {
         userId_projectId: {
-          userId: auth.user.id,
+          userId: currentUser.id,
           projectId,
         },
       },
     });
 
     const isAdmin =
-      auth.user.role === UserRole.ADMIN;
+      currentUser.role === UserRole.ADMIN;
 
     if (!isAdmin && !membership) {
       return NextResponse.json(
@@ -141,6 +153,18 @@ export async function POST(
               : "Only administrators and project managers can add members.",
         },
         { status: auth.status }
+      );
+    }
+
+    const currentUser = auth.user;
+
+    if (!currentUser) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Authentication required.",
+        },
+        { status: 401 }
       );
     }
 
