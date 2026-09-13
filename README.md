@@ -586,5 +586,5 @@ This project is currently intended for educational and portfolio purposes.
 ---
 
 <p align="center">
-  Built with ❤️ by Parham SH
+  Built with ❤️ by Parham.sh and h.hayat
 </p>
