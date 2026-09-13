@@ -614,6 +614,6 @@ DevHayat is continuously being improved with new features, security improvements
 
 ### Copyright
 
-Copyright © 2026 Parham Hayat.
+Copyright © 2026 Parham sh and h.Hayat.
 
 All rights reserved except where explicitly permitted by the DevHayat Community License v1.0.
