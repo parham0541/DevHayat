@@ -1,5 +1,15 @@
 # DevHayat
 
+<div align="center">
+
+![License](https://img.shields.io/badge/License-DevHayat_Community_License_v1.0-2563EB?style=flat-square) ![Version](https://img.shields.io/badge/Version-0.1.0-0D9488?style=flat-square)
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![PWA](https://img.shields.io/badge/PWA-Ready-5A0FC8?style=flat-square&logo=pwa&logoColor=white) ![Neon](https://img.shields.io/badge/Neon-PostgreSQL-059669?style=flat-square) ![GitHub Stars](https://img.shields.io/github/stars/parham0541/DevHayat?style=flat-square&logo=github&label=Stars) ![GitHub Forks](https://img.shields.io/github/forks/parham0541/DevHayat?style=flat-square&logo=github&label=Forks) ![GitHub Issues](https://img.shields.io/github/issues/parham0541/DevHayat?style=flat-square&logo=github&label=Issues) ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/parham0541/DevHayat?style=flat-square&logo=github&label=Pull%20Requests) ![GitHub Last Commit](https://img.shields.io/github/last-commit/parham0541/DevHayat/main?style=flat-square&logo=github&label=Last%20Commit)
+
+</div>
+
 > A modern project management platform for software development teams.
 
 DevHayat is a full-stack project management platform designed for software development teams. It provides project tracking, task management, issue tracking, sprint management, team management, reports, authentication, role-based access control, and a Progressive Web App experience.
